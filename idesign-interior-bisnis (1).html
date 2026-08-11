@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Idesign Interior & Bisnis — Jasa Interior & Furniture Custom Bogor</title>
+<meta name="description" content="Idesign Interior & Bisnis menyediakan jasa pembuatan interior dan furniture custom untuk perkantoran, kitchen set, cafe, dan resto sesuai kebutuhan Anda. Berbasis di Bogor, Jawa Barat.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1C1712;
+    --ink-soft:#241D16;
+    --ink-line:#3A3025;
+    --paper:#EFE8D8;
+    --paper-dim:#E3DAC5;
+    --brass:#BC8F4F;
+    --brass-light:#DDB77C;
+    --moss:#7C8862;
+    --text-dark:#EDE6D6;
+    --text-dark-muted:#A99C87;
+    --text-paper:#241C14;
+    --text-paper-muted:#5C5240;
+    --radius:2px;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  body{
+    margin:0;
+    background-color:var(--ink);
+    background-image:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.028) 0px, rgba(255,255,255,0.028) 1px, transparent 1px, transparent 97px),
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.32) 0px, rgba(0,0,0,0.32) 2px, transparent 2px, transparent 97px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, transparent 1px, transparent 5px),
+      linear-gradient(180deg, #1E1812 0%, #191410 100%);
+    background-attachment:fixed;
+    color:var(--text-dark);
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    color:inherit;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  ul{margin:0; padding:0; list-style:none;}
+  p{margin:0;}
+
+  .mono{
+    font-family:'JetBrains Mono', monospace;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+  }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  a:focus-visible,
+  button:focus-visible{
+    outline:2px solid var(--brass-light);
+    outline-offset:3px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(28,23,18,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--ink-line);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 28px;
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .brand-mark{
+    width:34px;height:34px;
+    border:1px solid var(--brass);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:15px;
+    color:var(--brass-light);
+    flex-shrink:0;
+  }
+  .brand-name{
+    font-family:'Fraunces', serif;
+    font-size:1.02rem;
+    font-weight:600;
+    line-height:1.15;
+  }
+  .brand-name span{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.6rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--text-dark-muted);
+    margin-top:2px;
+  }
+
+  nav.links{
+    display:flex;
+    align-items:center;
+    gap:34px;
+  }
+  nav.links a{
+    font-size:0.88rem;
+    color:var(--text-dark-muted);
+    transition:color 0.2s ease;
+  }
+  nav.links a:hover{ color:var(--text-dark); }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 22px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.74rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    border:1px solid var(--brass);
+    color:var(--brass-light);
+    border-radius:var(--radius);
+    transition:all 0.2s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{ background:var(--brass); color:var(--ink); }
+  .btn-solid{
+    background:var(--brass);
+    color:var(--ink);
+  }
+  .btn-solid:hover{ background:var(--brass-light); border-color:var(--brass-light); }
+
+  .menu-toggle{
+    display:none;
+    background:none;
+    border:1px solid var(--ink-line);
+    color:var(--text-dark);
+    width:40px;height:40px;
+    align-items:center;justify-content:center;
+    cursor:pointer;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:100px 0 90px;
+    overflow:hidden;
+    border-bottom:1px solid var(--ink-line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:60px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--brass-light);
+    margin-bottom:26px;
+  }
+  .eyebrow .dash{ width:28px; height:1px; background:var(--brass); }
+
+  .hero h1{
+    font-size:clamp(2.4rem, 5vw, 3.7rem);
+    line-height:1.06;
+    font-weight:500;
+    color:var(--text-dark);
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--brass-light);
+    font-weight:500;
+  }
+  .hero p.lead{
+    margin-top:26px;
+    font-size:1.08rem;
+    color:var(--text-dark-muted);
+    max-width:480px;
+    line-height:1.75;
+  }
+  .hero-cta{
+    display:flex;
+    gap:16px;
+    margin-top:40px;
+    flex-wrap:wrap;
+  }
+
+  .hero-specs{
+    margin-top:56px;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+  }
+  .hero-specs div{ border-left:1px solid var(--ink-line); padding-left:16px; }
+  .hero-specs strong{
+    display:block;
+    font-family:'Fraunces', serif;
+    font-size:1.7rem;
+    font-weight:500;
+    color:var(--brass-light);
+  }
+  .hero-specs span{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--text-dark-muted);
+  }
+
+  /* blueprint signature illustration */
+  .blueprint{
+    position:relative;
+    aspect-ratio:4/5;
+    border:1px solid var(--ink-line);
+    background:
+      linear-gradient(var(--ink-line) 1px, transparent 1px) 0 0/100% 40px,
+      linear-gradient(90deg, var(--ink-line) 1px, transparent 1px) 0 0/40px 100%,
+      var(--ink-soft);
+    background-blend-mode:normal;
+    opacity:0.98;
+  }
+  .blueprint svg{ width:100%; height:100%; }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{ padding:96px 0; }
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:40px;
+    margin-bottom:56px;
+    flex-wrap:wrap;
+  }
+  .section-head .eyebrow{ margin-bottom:14px; }
+  .section-head h2{
+    font-size:clamp(1.7rem, 3vw, 2.4rem);
+    font-weight:500;
+    max-width:560px;
+    line-height:1.2;
+  }
+  .section-head p{
+    max-width:340px;
+    color:var(--text-dark-muted);
+    font-size:0.95rem;
+    line-height:1.7;
+  }
+
+  .on-paper{
+    background-color:var(--paper);
+    background-image:
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.035) 0px, rgba(0,0,0,0.035) 1px, transparent 1px, transparent 110px),
+      linear-gradient(180deg, #F1EADA 0%, #E9E1CD 100%);
+    color:var(--text-paper);
+  }
+  .on-paper .text-dark-muted, .on-paper p{ color:var(--text-paper-muted); }
+  .on-paper .eyebrow{ color:#8A5F2B; }
+  .on-paper h2{ color:var(--text-paper); }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .about-grid p{
+    font-size:1.02rem;
+    line-height:1.85;
+    color:var(--text-paper-muted);
+    margin-bottom:20px;
+  }
+  .about-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:28px;
+  }
+  .about-tags span{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    border:1px solid #C9BEA0;
+    padding:7px 12px;
+    color:#5C5240;
+  }
+
+  /* ---------- ABOUT PHOTO ---------- */
+  .about-photo{
+    position:relative;
+    border:1px solid #C9BEA0;
+    aspect-ratio:4/5;
+    overflow:hidden;
+  }
+  .about-photo img{
+    width:100%; height:100%;
+    object-fit:cover;
+    filter:sepia(0.12) saturate(0.9) contrast(1.02);
+  }
+  .about-photo figcaption{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:14px 16px;
+    background:linear-gradient(0deg, rgba(28,23,18,0.82), transparent);
+    color:#EDE6D6;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    gap:1px;
+    background:var(--ink-line);
+    border:1px solid var(--ink-line);
+  }
+  .gallery-item{
+    position:relative;
+    overflow:hidden;
+    background:var(--ink-soft);
+  }
+  .gallery-item:first-child{ grid-row:1 / 3; }
+  .gallery-item img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(0.15) contrast(1.03);
+    transition:transform 0.5s ease, filter 0.5s ease;
+  }
+  .gallery-item:hover img{ transform:scale(1.04); filter:grayscale(0) contrast(1.05); }
+  .gallery-item figcaption{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:16px 18px;
+    background:linear-gradient(0deg, rgba(20,16,12,0.88), transparent 70%);
+  }
+  .gallery-item figcaption .cat{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.66rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--brass-light);
+    margin-bottom:4px;
+  }
+  .gallery-item figcaption .cap{
+    font-family:'Fraunces', serif;
+    font-size:1.05rem;
+    color:#F1ECDD;
+  }
+  .gallery-note{
+    margin-top:22px;
+    font-size:0.82rem;
+    color:var(--text-dark-muted);
+    max-width:640px;
+    line-height:1.65;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:var(--ink-line);
+    border:1px solid var(--ink-line);
+  }
+  .service-card{
+    background:var(--ink);
+    padding:38px 28px 32px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    transition:background 0.25s ease;
+  }
+  .service-card:hover{ background:var(--ink-soft); }
+  .service-num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.7rem;
+    color:var(--brass-light);
+    letter-spacing:0.08em;
+  }
+  .service-icon{ width:40px; height:40px; color:var(--brass-light); }
+  .service-card h3{
+    font-size:1.15rem;
+    font-weight:500;
+    color:var(--text-dark);
+  }
+  .service-card p{
+    font-size:0.9rem;
+    color:var(--text-dark-muted);
+    line-height:1.65;
+  }
+
+  /* ---------- PROCESS ---------- */
+  .process-list{
+    border-top:1px solid var(--ink-line);
+  }
+  .process-item{
+    display:grid;
+    grid-template-columns:90px 1fr 1.4fr;
+    gap:32px;
+    align-items:start;
+    padding:34px 0;
+    border-bottom:1px solid var(--ink-line);
+  }
+  .process-item .num{
+    font-family:'Fraunces', serif;
+    font-size:1.6rem;
+    color:var(--brass-light);
+    font-weight:400;
+  }
+  .process-item h3{
+    font-size:1.15rem;
+    font-weight:500;
+    color:var(--text-dark);
+  }
+  .process-item p{
+    color:var(--text-dark-muted);
+    font-size:0.94rem;
+    line-height:1.7;
+  }
+
+  /* ---------- WHY US ---------- */
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:2px;
+    background:#C9BEA0;
+    border:1px solid #C9BEA0;
+  }
+  .why-card{
+    background:var(--paper);
+    padding:34px;
+    display:flex;
+    gap:18px;
+  }
+  .why-card .mark{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:1.6rem;
+    color:var(--brass);
+    flex-shrink:0;
+    line-height:1;
+  }
+  .why-card h4{
+    font-size:1.02rem;
+    font-weight:600;
+    color:var(--text-paper);
+    margin-bottom:8px;
+  }
+  .why-card p{
+    font-size:0.9rem;
+    color:var(--text-paper-muted);
+    line-height:1.65;
+  }
+
+  /* ---------- CONTACT / CTA ---------- */
+  .contact-band{
+    background:var(--brass);
+    color:var(--ink);
+    padding:64px 0;
+  }
+  .contact-band-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:32px;
+    flex-wrap:wrap;
+  }
+  .contact-band h2{
+    font-size:clamp(1.6rem, 3vw, 2.2rem);
+    font-weight:500;
+    color:var(--ink);
+    max-width:480px;
+  }
+  .contact-band .btn{
+    border-color:var(--ink);
+    color:var(--ink);
+  }
+  .contact-band .btn:hover{ background:var(--ink); color:var(--brass-light); }
+
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+  }
+  .contact-info h3{
+    font-size:0.72rem;
+    font-family:'JetBrains Mono', monospace;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--brass-light);
+    margin-bottom:10px;
+  }
+  .contact-block{ margin-bottom:34px; }
+  .contact-block p, .contact-block a{
+    font-size:1rem;
+    color:var(--text-dark);
+    line-height:1.7;
+  }
+  .contact-block a:hover{ color:var(--brass-light); }
+  .map-frame{
+    border:1px solid var(--ink-line);
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .map-frame iframe{ width:100%; height:100%; border:0; filter:grayscale(0.4) contrast(1.05); }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    border-top:1px solid var(--ink-line);
+    padding:34px 0;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .footer-inner p{
+    font-size:0.8rem;
+    color:var(--text-dark-muted);
+  }
+  .footer-links{ display:flex; gap:22px; }
+  .footer-links a{
+    font-size:0.8rem;
+    color:var(--text-dark-muted);
+  }
+  .footer-links a:hover{ color:var(--brass-light); }
+
+  /* ---------- FLOATING WA ---------- */
+  .wa-float{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    z-index:60;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#25D366;
+    color:#0b3b1f;
+    padding:13px 20px 13px 14px;
+    border-radius:40px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.75rem;
+    letter-spacing:0.03em;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+    transition:transform 0.2s ease;
+  }
+  .wa-float:hover{ transform:translateY(-3px); }
+  .wa-float svg{ width:20px; height:20px; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px){
+    nav.links{ display:none; }
+    .menu-toggle{ display:flex; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .blueprint{ order:-1; aspect-ratio:16/9; }
+    .about-grid{ grid-template-columns:1fr; gap:36px; }
+    .about-photo{ aspect-ratio:16/10; }
+    .gallery-grid{ grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+    .gallery-item{ aspect-ratio:4/3; }
+    .gallery-item:first-child{ grid-row:auto; grid-column:1 / 3; aspect-ratio:16/9; }
+    .services-grid{ grid-template-columns:repeat(2, 1fr); }
+    .why-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; gap:44px; }
+    .process-item{ grid-template-columns:50px 1fr; }
+    .process-item p{ grid-column:2/3; }
+  }
+  @media (max-width: 560px){
+    .wrap{ padding:0 20px; }
+    section{ padding:64px 0; }
+    .gallery-grid{ grid-template-columns:1fr; }
+    .gallery-item:first-child{ grid-column:auto; }
+    .services-grid{ grid-template-columns:1fr; }
+    .hero{ padding:56px 0 60px; }
+    .hero-specs{ gap:26px; }
+    .contact-band-inner{ flex-direction:column; align-items:flex-start; }
+    .wa-float span.label{ display:none; }
+    .wa-float{ padding:14px; border-radius:50%; }
+  }
+
+  nav.links.open{
+    display:flex;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--ink);
+    flex-direction:column;
+    padding:24px 28px 30px;
+    border-bottom:1px solid var(--ink-line);
+    gap:20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="brand-mark">Id</div>
+      <div class="brand-name">Idesign Interior & Bisnis
+        <span>Custom Interior Workshop</span>
+      </div>
+    </div>
+    <nav class="links" id="navLinks">
+      <a href="#tentang">Tentang</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#proses">Proses</a>
+      <a href="#kontak">Kontak</a>
+      <a href="https://wa.me/6289614293792?text=Halo%20Idesign%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20interior%2Ffurniture%20custom." target="_blank" rel="noopener" class="btn btn-solid">Konsultasi WA</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow mono"><span class="dash"></span>Jasa Interior & Furniture Custom · Bogor</div>
+        <h1>Ruang kerja dan usaha Anda,<br><em>dirancang sesuai ukuran</em> sebenarnya.</h1>
+        <p class="lead">Idesign Interior & Bisnis membuatkan interior dan furniture custom untuk kantor, kitchen set, cafe, dan resto — dari sketsa, produksi, hingga pemasangan di lokasi.</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/6289614293792?text=Halo%20Idesign%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20interior%2Ffurniture%20custom." target="_blank" rel="noopener" class="btn btn-solid">Konsultasi Gratis via WhatsApp</a>
+          <a href="#layanan" class="btn">Lihat Layanan</a>
+        </div>
+        <div class="hero-specs">
+          <div><strong>100%</strong><span>Custom sesuai request</span></div>
+          <div><strong>Kantor · Cafe</strong><span>Kitchen set & lainnya</span></div>
+          <div><strong>Bogor</strong><span>Jawa Barat</span></div>
+        </div>
+      </div>
+
+      <div class="blueprint" role="img" aria-label="Ilustrasi garis ukuran teknikal ruang interior custom">
+        <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="60" y="90" width="280" height="150" stroke="#DDB77C" stroke-width="1"/>
+          <line x1="60" y1="70" x2="340" y2="70" stroke="#BC8F4F" stroke-width="1"/>
+          <line x1="60" y1="64" x2="60" y2="76" stroke="#BC8F4F" stroke-width="1"/>
+          <line x1="340" y1="64" x2="340" y2="76" stroke="#BC8F4F" stroke-width="1"/>
+          <text x="185" y="60" fill="#DDB77C" font-family="JetBrains Mono, monospace" font-size="11">280 CM</text>
+
+          <line x1="40" y1="90" x2="40" y2="240" stroke="#BC8F4F" stroke-width="1"/>
+          <line x1="34" y1="90" x2="46" y2="90" stroke="#BC8F4F" stroke-width="1"/>
+          <line x1="34" y1="240" x2="46" y2="240" stroke="#BC8F4F" stroke-width="1"/>
+          <text x="8" y="168" fill="#DDB77C" font-family="JetBrains Mono, monospace" font-size="11">150</text>
+
+          <rect x="90" y="270" width="90" height="60" stroke="#8A6C42" stroke-width="1"/>
+          <rect x="200" y="270" width="140" height="60" stroke="#8A6C42" stroke-width="1"/>
+          <circle cx="120" cy="380" r="26" stroke="#8A6C42" stroke-width="1"/>
+          <circle cx="190" cy="380" r="26" stroke="#8A6C42" stroke-width="1"/>
+          <circle cx="260" cy="380" r="26" stroke="#8A6C42" stroke-width="1"/>
+
+          <line x1="60" y1="420" x2="340" y2="420" stroke="#3A3025" stroke-width="1" stroke-dasharray="4 4"/>
+          <text x="60" y="440" fill="#7C8862" font-family="JetBrains Mono, monospace" font-size="10">R.01 — LAYOUT REF</text>
+          <text x="60" y="456" fill="#5C5240" font-family="JetBrains Mono, monospace" font-size="10">IDESIGN INTERIOR & BISNIS</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section id="tentang" class="on-paper">
+    <div class="wrap about-grid">
+      <figure class="about-photo">
+        <img src="https://images.pexels.com/photos/18947396/pexels-photo-18947396.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Proses pengerjaan furniture kayu custom di workshop" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23241D16%22/%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%22399%22%20height%3D%22299%22%20fill%3D%22none%22%20stroke%3D%22%233A3025%22/%3E%3Cg%20stroke%3D%22%23BC8F4F%22%20stroke-width%3D%221%22%20fill%3D%22none%22%3E%3Crect%20x%3D%22150%22%20y%3D%22110%22%20width%3D%22100%22%20height%3D%2270%22/%3E%3Cline%20x1%3D%22150%22%20y1%3D%22110%22%20x2%3D%22130%22%20y2%3D%22130%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%22110%22%20x2%3D%22270%22%20y2%3D%22130%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22130%22%20x2%3D%22130%22%20y2%3D%22200%22/%3E%3Cline%20x1%3D%22270%22%20y1%3D%22130%22%20x2%3D%22270%22%20y2%3D%22200%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22200%22%20x2%3D%22150%22%20y2%3D%22180%22/%3E%3Cline%20x1%3D%22270%22%20y1%3D%22200%22%20x2%3D%22250%22%20y2%3D%22180%22/%3E%3Cline%20x1%3D%22150%22%20y1%3D%22180%22%20x2%3D%22250%22%20y2%3D%22180%22/%3E%3C/g%3E%3Ctext%20x%3D%22200%22%20y%3D%22225%22%20fill%3D%22%23DDB77C%22%20font-family%3D%22monospace%22%20font-size%3D%2211%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EIDESIGN%20INTERIOR%3C/text%3E%3C/svg%3E';">
+        <figcaption>Proses produksi — dikerjakan sesuai ukuran</figcaption>
+      </figure>
+      <div>
+        <div class="eyebrow mono"><span class="dash" style="background:#8A5F2B;"></span>Tentang Kami</div>
+        <h2 style="margin-bottom:22px;">Bengkel kerja untuk ruang yang custom.</h2>
+        <p>Idesign Interior & Bisnis adalah penyedia jasa pembuatan interior dan furniture custom yang melayani kebutuhan ruang kerja, dapur, hingga area usaha. Setiap proyek dikerjakan berdasarkan ukuran ruangan, gaya, dan anggaran yang sesuai dengan permintaan klien — bukan produk massal yang dipaksakan masuk ke ruangan Anda.</p>
+        <p>Kami menangani proses secara menyeluruh: konsultasi kebutuhan, pengukuran lokasi, desain, produksi di workshop, hingga instalasi akhir. Fokus kami adalah memastikan hasil akhir sesuai gambar, sesuai ukuran, dan tahan lama untuk pemakaian sehari-hari.</p>
+        <div class="about-tags">
+          <span>Interior Kantor</span>
+          <span>Kitchen Set</span>
+          <span>Interior Cafe & Resto</span>
+          <span>Furniture Custom</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERI -->
+  <section id="galeri">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow mono"><span class="dash"></span>Galeri Referensi</div>
+          <h2>Gambaran gaya dan suasana yang bisa kami wujudkan.</h2>
+        </div>
+        <p>Foto referensi gaya interior untuk tiap kategori layanan kami — hasil akhir tetap disesuaikan dengan ukuran dan permintaan Anda.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://images.pexels.com/photos/7534216/pexels-photo-7534216.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Referensi interior kantor dengan panel kayu dan furniture custom" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23241D16%22/%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%22399%22%20height%3D%22299%22%20fill%3D%22none%22%20stroke%3D%22%233A3025%22/%3E%3Cg%20stroke%3D%22%23BC8F4F%22%20stroke-width%3D%221%22%20fill%3D%22none%22%3E%3Crect%20x%3D%22150%22%20y%3D%22110%22%20width%3D%22100%22%20height%3D%2270%22/%3E%3Cline%20x1%3D%22150%22%20y1%3D%22110%22%20x2%3D%22130%22%20y2%3D%22130%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%22110%22%20x2%3D%22270%22%20y2%3D%22130%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22130%22%20x2%3D%22130%22%20y2%3D%22200%22/%3E%3Cline%20x1%3D%22270%22%20y1%3D%22130%22%20x2%3D%22270%22%20y2%3D%22200%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22200%22%20x2%3D%22150%22%20y2%3D%22180%22/%3E%3Cline%20x1%3D%22270%22%20y1%3D%22200%22%20x2%3D%22250%22%20y2%3D%22180%22/%3E%3Cline%20x1%3D%22150%22%20y1%3D%22180%22%20x2%3D%22250%22%20y2%3D%22180%22/%3E%3C/g%3E%3Ctext%20x%3D%22200%22%20y%3D%22225%22%20fill%3D%22%23DDB77C%22%20font-family%3D%22monospace%22%20font-size%3D%2211%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EIDESIGN%20INTERIOR%3C/text%3E%3C/svg%3E';">
+          <figcaption><span class="cat">Interior Kantor</span><span class="cap">Ruang kerja & meeting</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.pexels.com/photos/7147286/pexels-photo-7147286.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Referensi kitchen set minimalis dengan kabinet kayu" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23241D16%22/%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%22399%22%20height%3D%22299%22%20fill%3D%22none%22%20stroke%3D%22%233A3025%22/%3E%3Cg%20stroke%3D%22%23BC8F4F%22%20stroke-width%3D%221%22%20fill%3D%22none%22%3E%3Crect%20x%3D%22150%22%20y%3D%22110%22%20width%3D%22100%22%20height%3D%2270%22/%3E%3Cline%20x1%3D%22150%22%20y1%3D%22110%22%20x2%3D%22130%22%20y2%3D%22130%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%22110%22%20x2%3D%22270%22%20y2%3D%22130%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22130%22%20x2%3D%22130%22%20y2%3D%22200%22/%3E%3Cline%20x1%3D%22270%22%20y1%3D%22130%22%20x2%3D%22270%22%20y2%3D%22200%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22200%22%20x2%3D%22150%22%20y2%3D%22180%22/%3E%3Cline%20x1%3D%22270%22%20y1%3D%22200%22%20x2%3D%22250%22%20y2%3D%22180%22/%3E%3Cline%20x1%3D%22150%22%20y1%3D%22180%22%20x2%3D%22250%22%20y2%3D%22180%22/%3E%3C/g%3E%3Ctext%20x%3D%22200%22%20y%3D%22225%22%20fill%3D%22%23DDB77C%22%20font-family%3D%22monospace%22%20font-size%3D%2211%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EIDESIGN%20INTERIOR%3C/text%3E%3C/svg%3E';">
+          <figcaption><span class="cat">Kitchen Set</span><span class="cap">Minimalis & fungsional</span></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.pexels.com/photos/33683554/pexels-photo-33683554.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Referensi interior cafe dengan furniture kayu custom" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23241D16%22/%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%22399%22%20height%3D%22299%22%20fill%3D%22none%22%20stroke%3D%22%233A3025%22/%3E%3Cg%20stroke%3D%22%23BC8F4F%22%20stroke-width%3D%221%22%20fill%3D%22none%22%3E%3Crect%20x%3D%22150%22%20y%3D%22110%22%20width%3D%22100%22%20height%3D%2270%22/%3E%3Cline%20x1%3D%22150%22%20y1%3D%22110%22%20x2%3D%22130%22%20y2%3D%22130%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%22110%22%20x2%3D%22270%22%20y2%3D%22130%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22130%22%20x2%3D%22130%22%20y2%3D%22200%22/%3E%3Cline%20x1%3D%22270%22%20y1%3D%22130%22%20x2%3D%22270%22%20y2%3D%22200%22/%3E%3Cline%20x1%3D%22130%22%20y1%3D%22200%22%20x2%3D%22150%22%20y2%3D%22180%22/%3E%3Cline%20x1%3D%22270%22%20y1%3D%22200%22%20x2%3D%22250%22%20y2%3D%22180%22/%3E%3Cline%20x1%3D%22150%22%20y1%3D%22180%22%20x2%3D%22250%22%20y2%3D%22180%22/%3E%3C/g%3E%3Ctext%20x%3D%22200%22%20y%3D%22225%22%20fill%3D%22%23DDB77C%22%20font-family%3D%22monospace%22%20font-size%3D%2211%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EIDESIGN%20INTERIOR%3C/text%3E%3C/svg%3E';">
+          <figcaption><span class="cat">Interior Cafe & Resto</span><span class="cap">Hangat & mengundang</span></figcaption>
+        </figure>
+      </div>
+      <p class="gallery-note">*Foto di atas adalah referensi gaya dan suasana ruang, digunakan sebagai gambaran arah desain — bukan dokumentasi proyek. Untuk melihat portofolio pekerjaan kami, silakan kunjungi Instagram @idesign.interiorfurniture.</p>
+    </div>
+  </section>
+
+  <!-- LAYANAN -->
+  <section id="layanan">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow mono"><span class="dash"></span>Layanan</div>
+          <h2>Empat area utama, satu pendekatan: dirancang sesuai kebutuhan Anda.</h2>
+        </div>
+        <p>Di luar empat kategori ini, kami juga menerima permintaan furniture custom lain sesuai spesifikasi yang Anda ajukan.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="services-grid">
+
+        <div class="service-card">
+          <span class="service-num mono">01</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="12" rx="0.5"/><line x1="3" y1="20" x2="21" y2="20"/><line x1="8" y1="16" x2="8" y2="20"/><line x1="16" y1="16" x2="16" y2="20"/></svg>
+          <h3>Interior Kantor</h3>
+          <p>Meja kerja, meja direksi, partisi ruangan, kabinet, hingga area meeting — dirancang menyesuaikan denah dan alur kerja tim Anda.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-num mono">02</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 8h16M4 8v11a1 1 0 001 1h14a1 1 0 001-1V8M4 8l2-4h12l2 4"/><line x1="9" y1="13" x2="9" y2="16"/><line x1="15" y1="13" x2="15" y2="16"/></svg>
+          <h3>Kitchen Set</h3>
+          <p>Kitchen set custom minimalis, modern, hingga klasik — mengikuti ukuran dapur asli, kebutuhan penyimpanan, dan gaya memasak Anda.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-num mono">03</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18"/><path d="M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg>
+          <h3>Interior Cafe & Resto</h3>
+          <p>Kursi, meja, bar counter, hingga elemen ruang yang mendukung suasana dan branding tempat usaha kuliner Anda.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-num mono">04</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3" width="16" height="18" rx="0.5"/><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><circle cx="17" cy="6" r="0.6" fill="currentColor" stroke="none"/></svg>
+          <h3>Furniture Custom Lainnya</h3>
+          <p>Lemari, wardrobe, rak display, nakas, hingga permintaan khusus lain — kami sesuaikan dengan spesifikasi yang Anda ajukan.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROSES -->
+  <section id="proses">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow mono"><span class="dash"></span>Alur Kerja</div>
+          <h2>Dari sketsa di atas kertas, sampai terpasang di ruangan Anda.</h2>
+        </div>
+        <p>Lima tahap yang kami jalankan pada setiap proyek, besar maupun kecil.</p>
+      </div>
+
+      <div class="process-list">
+        <div class="process-item">
+          <span class="num">01</span>
+          <h3>Konsultasi & Survey</h3>
+          <p>Diskusi kebutuhan, gaya, dan anggaran Anda, dilanjutkan pengecekan ukuran serta kondisi lokasi secara langsung.</p>
+        </div>
+        <div class="process-item">
+          <span class="num">02</span>
+          <h3>Desain & Sketsa</h3>
+          <p>Penyusunan gambar rancangan sesuai ukuran ruangan, lengkap dengan opsi revisi hingga desain disetujui.</p>
+        </div>
+        <div class="process-item">
+          <span class="num">03</span>
+          <h3>Penawaran & Kesepakatan</h3>
+          <p>Rincian biaya, pilihan material, dan estimasi waktu pengerjaan disampaikan sebelum proyek dimulai.</p>
+        </div>
+        <div class="process-item">
+          <span class="num">04</span>
+          <h3>Produksi di Workshop</h3>
+          <p>Pengerjaan furniture menggunakan material terpilih, diawasi langsung agar sesuai dengan desain yang disepakati.</p>
+        </div>
+        <div class="process-item">
+          <span class="num">05</span>
+          <h3>Instalasi & Serah Terima</h3>
+          <p>Pemasangan di lokasi, pemeriksaan akhir, dan serah terima hasil kepada Anda beserta ketentuan garansi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section class="on-paper">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow mono"><span class="dash" style="background:#8A5F2B;"></span>Kenapa Idesign</div>
+          <h2>Empat hal yang kami jaga di setiap proyek.</h2>
+        </div>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="mark">”</span>
+          <div>
+            <h4>Custom sesuai kebutuhan & budget</h4>
+            <p>Desain dan material disesuaikan dengan kebutuhan ruang serta anggaran yang Anda tentukan, bukan paket baku.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <span class="mark">”</span>
+          <div>
+            <h4>Material terpilih & tahan lama</h4>
+            <p>Kami menggunakan material dengan kualitas terjaga agar furniture tetap awet untuk pemakaian jangka panjang.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <span class="mark">”</span>
+          <div>
+            <h4>Tim berpengalaman di interior komersial</h4>
+            <p>Terbiasa menangani proyek kantor, kitchen set, hingga cafe dengan kebutuhan dan tenggat yang beragam.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <span class="mark">”</span>
+          <div>
+            <h4>Konsultasi awal tanpa biaya</h4>
+            <p>Diskusikan kebutuhan Anda terlebih dulu melalui WhatsApp sebelum memutuskan untuk melanjutkan proyek.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="contact-band" style="padding-top:64px; padding-bottom:64px;">
+    <div class="wrap contact-band-inner">
+      <h2>Punya rencana ruang kantor, dapur, atau cafe? Ceritakan kebutuhannya ke kami.</h2>
+      <a href="https://wa.me/6289614293792?text=Halo%20Idesign%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20interior%2Ffurniture%20custom." target="_blank" rel="noopener" class="btn">Chat via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow mono"><span class="dash"></span>Kontak</div>
+          <h2>Hubungi kami untuk mulai konsultasi.</h2>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-block">
+            <h3 class="mono">WhatsApp</h3>
+            <a href="https://wa.me/6289614293792?text=Halo%20Idesign%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20interior%2Ffurniture%20custom." target="_blank" rel="noopener">+62 896-1429-3792</a>
+          </div>
+          <div class="contact-block">
+            <h3 class="mono">Instagram</h3>
+            <a href="https://www.instagram.com/idesign.interiorfurniture/" target="_blank" rel="noopener">@idesign.interiorfurniture</a>
+          </div>
+          <div class="contact-block">
+            <h3 class="mono">Alamat Workshop</h3>
+            <p>Jl. Batu Hulung No.50B, RT.03/RW.01,<br>
+            Kelurahan Marga, Kec. Bogor Barat,<br>
+            Kota Bogor, Jawa Barat 16116</p>
+          </div>
+          <div class="contact-block">
+            <h3 class="mono">Jam Operasional</h3>
+            <p>Senin – Jumat, 09.00 – 16.00 WIB<br>Sabtu &amp; Minggu: dengan perjanjian</p>
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Jl.+Batu+Hulung+No.50B,+RT.03/RW.01,+Kelurahan+Marga,+Kec.+Bogor+Barat,+Kota+Bogor,+Jawa+Barat+16116&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi Idesign Interior & Bisnis di Bogor">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>© 2026 Idesign Interior & Bisnis. Seluruh hak cipta dilindungi.</p>
+    <div class="footer-links">
+      <a href="https://wa.me/6289614293792" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/idesign.interiorfurniture/" target="_blank" rel="noopener">Instagram</a>
+      <a href="#kontak">Alamat</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6289614293792?text=Halo%20Idesign%20Interior%2C%20saya%20ingin%20konsultasi%20mengenai%20interior%2Ffurniture%20custom." target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.63 1.44 5.15L2 22l5.09-1.53a9.87 9.87 0 004.95 1.33h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.12-4.86-4.31-.14-.19-1.17-1.55-1.17-2.96 0-1.4.74-2.09 1-2.38.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.13.63-.05.17-.19.72-.84.92-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.94.93.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>
+  <span class="label">Chat WhatsApp</span>
+</a>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
